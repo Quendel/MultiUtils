@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ImagePicker</string>
+    <string name="No_connection">No Internet Connection</string>
+    <string name="Network_error">Network Error</string>
+    <string name="Retry">Retry</string>
+    <string name="NoDataAvailable">Empty</string>
+
+
+</resources>
