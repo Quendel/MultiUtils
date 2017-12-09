@@ -34,10 +34,11 @@ public class QuendelImagePicker extends AppCompatActivity {
     public static int SELECTED_IMG_CROP = 102;
     private static int ASPECT_X = 1;
     private static int ASPECT_Y = 1;
-    private static int OUT_PUT_X = 300;
-    private static int OUT_PUT_Y = 300;
-    private static final boolean SCALE = true;
-
+    private static int OUT_PUT_X = 250;
+    private static int OUT_PUT_Y = 250;
+    private static int IMAGE_QUALITY = 100;
+    private static boolean SCALE = true;
+    
 
     public static QuendelImagePicker imagePicker;
     private Activity activity;
@@ -204,7 +205,7 @@ public class QuendelImagePicker extends AppCompatActivity {
 
     public static Uri writeToTempImageAndGetPathUri(Context inContext, Bitmap inImage) {
         ByteArrayOutputStream bytes = new ByteArrayOutputStream();
-        inImage.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
+        inImage.compress(Bitmap.CompressFormat.JPEG, IMAGE_QUALITY, bytes);
         String path = MediaStore.Images.Media.insertImage(inContext.getContentResolver(), inImage, "Title", null);
         OUT_PUT_X = inImage.getWidth();
         OUT_PUT_Y = inImage.getHeight();
@@ -212,7 +213,18 @@ public class QuendelImagePicker extends AppCompatActivity {
         ASPECT_Y = inImage.getHeight();
         return Uri.parse(path);
     }
-
+    
+    public static void setPictureQuality(int imageQuality,int aspectX,int aspectY
+                                        int outputY,int outputX,boolean scale) {
+       this.IMAGE_QUALITY = imageQuality;
+       this.ASPECT_X = aspectX;
+       this.ASPECT_Y = aspectY;
+       this.OUT_PUT_Y = outputY;
+       this.OUT_PUT_X = outputX;
+       this.SCALE = scale;
+      
+    }
+  
 }
 
 
