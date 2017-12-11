@@ -53,10 +53,10 @@ public class QuendelImagePicker extends AppCompatActivity {
     }
     
     public void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
-        mContext = mContext;
-        activity = activity;
-        pickerCallback = pickerCallback;
-        checkPermission();
+        imagePicker.mContext = mContext;
+        imagePicker.activity = activity;
+        imagePicker.pickerCallback = pickerCallback;
+        imagePicker.checkPermission();
     }
 /* 
     public void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
