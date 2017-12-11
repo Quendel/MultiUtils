@@ -47,16 +47,25 @@ public class QuendelImagePicker extends AppCompatActivity {
     private File selectedImageFile;
     public Uri cropPictureUrl, selectedImageUri = null, cameraUrl = null;
 
-
-    public static void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
-
-        imagePicker = new QuendelImagePicker();
+    public static QuendelImagePicker mInstance(){
+      imagePicker = new QuendelImagePicker();
+      return imagePicker;
+    }
+    
+    public void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
+        mContext = mContext;
+        activity = activity;
+        pickerCallback = pickerCallback;
+        checkPermission();
+    }
+/* 
+    public void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
         imagePicker.mContext = mContext;
         imagePicker.activity = activity;
         imagePicker.pickerCallback = pickerCallback;
         imagePicker.checkPermission();
     }
-
+*/
     public void checkPermission() {
         DevicePermission.CheckPermissions(activity, new PermissionCallback() {
             @Override
@@ -214,7 +223,7 @@ public class QuendelImagePicker extends AppCompatActivity {
         return Uri.parse(path);
     }
     
-    public static void setPictureQuality(int imageQuality,int aspectX,int aspectY
+    public void setPictureQuality(int imageQuality,int aspectX,int aspectY
                                         int outputY,int outputX,boolean scale) {
        this.IMAGE_QUALITY = imageQuality;
        this.ASPECT_X = aspectX;
@@ -222,9 +231,7 @@ public class QuendelImagePicker extends AppCompatActivity {
        this.OUT_PUT_Y = outputY;
        this.OUT_PUT_X = outputX;
        this.SCALE = scale;
-      
-    }
-  
+    }  
 }
 
 
