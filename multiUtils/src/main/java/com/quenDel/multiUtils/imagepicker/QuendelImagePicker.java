@@ -223,14 +223,14 @@ public class QuendelImagePicker extends AppCompatActivity {
         return Uri.parse(path);
     }
     
-    public void setPictureQuality(int imageQuality,int aspectX,int aspectY
+    public void setPictureQuality(int imageQuality,int aspectX,int aspectY,
                                         int outputY,int outputX,boolean scale) {
-       this.IMAGE_QUALITY = imageQuality;
-       this.ASPECT_X = aspectX;
-       this.ASPECT_Y = aspectY;
-       this.OUT_PUT_Y = outputY;
-       this.OUT_PUT_X = outputX;
-       this.SCALE = scale;
+       IMAGE_QUALITY = imageQuality;
+       ASPECT_X = aspectX;
+       ASPECT_Y = aspectY;
+       OUT_PUT_Y = outputY;
+       OUT_PUT_X = outputX;
+       SCALE = scale;
     }  
 }
 
