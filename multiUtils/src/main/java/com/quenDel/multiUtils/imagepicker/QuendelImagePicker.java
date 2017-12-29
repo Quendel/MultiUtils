@@ -30,8 +30,8 @@ import java.util.List;
 
 public class QuendelImagePicker extends AppCompatActivity {
 
-    public static int CHOOSE_PHOTO_INTENT = 101;
-    public static int SELECTED_IMG_CROP = 102;
+    public static final int CHOOSE_PHOTO_INTENT = 101;
+    public static final int SELECTED_IMG_CROP = 102;
     private static int ASPECT_X = 1;
     private static int ASPECT_Y = 1;
     private static int OUT_PUT_X = 250;
@@ -58,14 +58,7 @@ public class QuendelImagePicker extends AppCompatActivity {
         imagePicker.pickerCallback = pickerCallback;
         imagePicker.checkPermission();
     }
-/* 
-    public void openImagePicker(Activity activity, Context mContext, ImagePickerCallback pickerCallback) {
-        imagePicker.mContext = mContext;
-        imagePicker.activity = activity;
-        imagePicker.pickerCallback = pickerCallback;
-        imagePicker.checkPermission();
-    }
-*/
+
     public void checkPermission() {
         DevicePermission.CheckPermissions(activity, new PermissionCallback() {
             @Override
@@ -133,7 +126,6 @@ public class QuendelImagePicker extends AppCompatActivity {
 
         } catch (IOException e) {
             e.printStackTrace();
-
         }
     }
 

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FingerDemo.iml" filepath="$PROJECT_DIR$/FingerDemo.iml" />
+      <module fileurl="file://C:\Users\rahul\Downloads\MultiUtils-master\MultiUtils-master\FingerDemo.iml" filepath="C:\Users\rahul\Downloads\MultiUtils-master\MultiUtils-master\FingerDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MultiUtils-master.iml" filepath="$PROJECT_DIR$/MultiUtils-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiUtils/multiUtils.iml" filepath="$PROJECT_DIR$/multiUtils/multiUtils.iml" />
     </modules>
